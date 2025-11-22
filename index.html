@@ -3,919 +3,108 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Banned Books | A Chronicle of Censorship</title>
+    <title>About | Banned Books</title>
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="manifest" href="/site.webmanifest" />
     <link rel="stylesheet" href="style.css" />
-    <style>
-      body {
-        background-image: url("medieval_right_background.png"),
-          url("medieval_left_background.png"),
-          url("images/background/parchment.jpg");
-        background-position: right top, left top, right top;
-        background-repeat: repeat-y, repeat-y, repeat;
-        background-attachment: scroll, scroll, scroll;
-        background-color: #e2dbcb;
-        color: #553819;
-        cursor: url("frog_cursor.png"), auto;
-        image-rendering: auto;
-      }
-      h1 {
-        color: #8b1a1a;
-        font-size: 3rem;
-      }
-
-      h2,
-      h3,
-      h4 {
-        color: #553819;
-      }
-
-      p {
-        color: #553819;
-      }
-
-      a:link,
-      a:visited,
-      a:active {
-        color: #8b1a1a;
-      }
-
-      a:hover {
-        color: #d94545;
-        cursor: url("frog_cursor.png"), auto;
-      }
-
-      .content {
-        max-width: 1000px;
-        margin: auto;
-      }
-
-      .tab {
-        background-color: #d4c5b0;
-        padding: 8px 10px;
-        margin: 20px 4px;
-        color: #8b1a1a;
-        border: solid 4px #8b1a1a;
-        font-size: 16px;
-      }
-
-      .tab:hover {
-        background-color: #c3837f;
-        border-color: #663431;
-        color: #663431;
-        cursor: url("frog_cursor.png"), auto;
-      }
-
-      .icons {
-        filter: none;
-        margin-top: 25px;
-      }
-
-      .icontext {
-        background-color: #d4c5b0;
-        color: #8b1a1a;
-        border: solid 4px #8b1a1a;
-      }
-
-      figcaption {
-        background-color: #d4c5b0;
-        font-style: italic;
-        padding: 5px;
-        margin-top: 5px;
-      }
-
-      .book-entry {
-        margin: 20px 0;
-        padding: 15px;
-        background-color: rgba(212, 197, 176, 0.3);
-        border-left: 4px solid #8b1a1a;
-      }
-
-      .book-title {
-        font-weight: bold;
-        color: #8b1a1a;
-        font-size: 1.1em;
-      }
-
-      .book-author {
-        font-style: italic;
-        color: #553819;
-      }
-
-      .reason {
-        margin-top: 8px;
-        font-size: 0.95em;
-      }
-
-      blockquote {
-        border-left: 3px solid #8b1a1a;
-        padding-left: 15px;
-        margin: 15px 0;
-        font-style: italic;
-      }
-
-      .left {
-        float: left;
-        margin-right: 20px;
-        margin-bottom: 10px;
-      }
-
-      .right {
-        float: right;
-        margin-left: 20px;
-        margin-bottom: 10px;
-      }
-
-      .nofloat {
-        float: none;
-        margin: 0 auto;
-      }
-
-      @media screen and (max-width: 1920px) {
-        body {
-          background-size: 20%, 20%, auto;
-        }
-        .content {
-          width: 58%;
-        }
-      }
-
-      @media screen and (max-width: 1220px) {
-        body {
-          background-image: url("images/background/parchment.jpg");
-          background-position: right top;
-          background-repeat: repeat;
-          background-attachment: scroll;
-        }
-        .content {
-          width: 80%;
-        }
-      }
-
-      @media screen and (max-width: 600px) {
-        nav a {
-          border-color: #8b1a1a;
-        }
-        .content {
-          width: 100%;
-        }
-        .left, .right {
-          float: none;
-          margin: 15px auto;
-          display: block;
-        }
-      }
-    </style>
   </head>
   <body>
     <div class="content">
       <header>
         <h1>Banned Books in America</h1>
-        <p style="text-align: center; font-style: italic;">A Chronicle of Literary Censorship</p>
+        <p class="header-subtitle">A Chronicle of Literary Censorship</p>
       </header>
 
       <main>
-        <div class="flex" style="justify-content: center">
-          <button class="tab" onclick="openTabs('About')">About</button>
-          <button class="tab" onclick="openTabs('Classic')">Classic Literature</button>
-          <button class="tab" onclick="openTabs('Contemporary')">Contemporary</button>
-          <button class="tab" onclick="openTabs('Youth')">Young Adult</button>
-          <button class="tab" onclick="openTabs('Childrens')">Children's Books</button>
-          <button class="tab" onclick="openTabs('LGBTQ')">LGBTQ+ Themes</button>
-          <button class="tab" onclick="openTabs('Race')">Race & Identity</button>
-          <button class="tab" onclick="openTabs('Resources')">Resources</button>
-        </div>
+        <nav class="flex">
+          <a href="index.html" class="tab">About</a>
+          <a href="classicbooks.html" class="tab">Classic Literature</a>
+          <a href="contemporarybooks.html" class="tab">Contemporary</a>
+          <a href="childrensbooks.html" class="tab">Children's Books</a>
+          <a href="LGBTQbooks.html" class="tab">LGBTQ+ Themes</a>
+          <a href="racebooks.html" class="tab">Race & Identity</a>
+          <a href="resources.html" class="tab">Resources</a>
+        </nav>
 
-        <div id="About" class="tabs">
-          <div style="text-align: left; padding-bottom: 30px">
-            <h2>About Book Banning in the United States</h2>
+        <div class="text-left">
+          <h2>About Book Banning in the United States</h2>
 
-            <p>
-              Book banning and censorship in the United States has a long and troubling history. A book challenge is an attempt to remove or restrict materials based on the objections of a person or group. A book ban is the actual removal of those materials. Challenges do not simply involve a person expressing a point of view; rather, they are an attempt to remove material from the curriculum or library, thereby restricting the access of others.
-            </p>
-
-            <blockquote>
-              "Censorship is telling a man he can't have a steak just because a baby can't chew it." — Mark Twain
-            </blockquote>
-
-            <p>
-              According to the American Library Association (ALA), there has been a dramatic increase in book challenges and bans in recent years. In 2022 alone, over 1,200 unique titles were challenged, the highest number of attempted book bans since the ALA began compiling data about censorship in libraries more than 20 years ago. These challenges predominantly target books by or about people of color and LGBTQ+ individuals.
-            </p>
-
-            <p>
-              Books are typically challenged for containing materials deemed "sexually explicit," having "offensive language," being "unsuited to age group," containing "LGBTQ+ content," featuring "religious viewpoint," discussing "violence," addressing "racism," or exploring "political viewpoint." Often, books that address difficult topics like racism, sexual abuse, or LGBTQ+ experiences are targeted precisely because they give voice to marginalized communities and validate the experiences of young readers who see themselves reflected in these stories.
-            </p>
-
-            <p>
-              The First Amendment protects freedom of speech and expression, which includes the right to read. While parents certainly have the right to guide their own children's reading, book bans in schools and libraries restrict access for all students and community members. They represent a form of censorship that limits intellectual freedom and the free exchange of ideas.
-            </p>
-
-            <h3>The Impact of Book Banning</h3>
-            <p>
-              Book banning has profound effects on education, literacy, and democratic values. When books are removed from libraries and classrooms, students lose access to diverse perspectives, historical contexts, and stories that might help them understand themselves and others. Censorship particularly impacts marginalized communities whose stories are most often targeted for removal.
-            </p>
-
-            <p>
-              Librarians and educators face increasing pressure and threats when defending intellectual freedom. Many report self-censorship, avoiding purchasing books that might be challenged, which further limits access to diverse literature. Teachers modify curricula to avoid controversy, and some have faced termination for refusing to remove books from their classrooms.
-            </p>
-
-            <h3>Resources and Further Reading:</h3>
-            <ul class="list">
-              <li>
-                <a href="https://www.ala.org/advocacy/bbooks" target="_blank">
-                  American Library Association - Banned & Challenged Books
-                </a>
-              </li>
-              <li>
-                <a href="https://pen.org/report/banned-usa-growing-movement-to-censor-books-in-schools/" target="_blank">
-                  PEN America - Educational Censorship Report
-                </a>
-              </li>
-              <li>
-                <a href="https://www.ncac.org/" target="_blank">
-                  National Coalition Against Censorship
-                </a>
-              </li>
-              <li>
-                <a href="https://www.aclu.org/other/what-censorship" target="_blank">
-                  ACLU - What is Censorship?
-                </a>
-              </li>
-              <li>
-                <a href="https://bannedbooksweek.org/" target="_blank">
-                  Banned Books Week
-                </a>
-              </li>
-            </ul>
-
-            <blockquote>
-              "There is more than one way to burn a book. And the world is full of people running about with lit matches." — Ray Bradbury
-            </blockquote>
-          </div>
-        </div>
-
-        <div id="Classic" class="tabs" style="display: none">
-          <h2>Banned Classic Literature</h2>
           <p>
-            Even works now considered essential to American literature have faced censorship throughout history. These books challenged prevailing norms, addressed controversial topics, or used language deemed inappropriate for their time.
+            Book banning and censorship in the United States has a long and troubling history. A book challenge is an attempt to remove or restrict materials based on the objections of a person or group. A book ban is the actual removal of those materials. Challenges do not simply involve a person expressing a point of view; rather, they are an attempt to remove material from the curriculum or library, thereby restricting the access of others.
           </p>
-
-          <div class="book-entry">
-            <div class="book-title">To Kill a Mockingbird</div>
-            <div class="book-author">by Harper Lee (1960)</div>
-            <div class="reason">
-              <strong>Challenged for:</strong> Racial slurs, discussion of rape, offensive language
-            </div>
-            <p>
-              This Pulitzer Prize-winning novel exploring racism in the American South has been one of the most challenged books despite its anti-racist message. Critics object to the historical use of racial slurs in the text, while defenders argue the book provides crucial context for discussing America's racist past and present.
-            </p>
-          </div>
-
-          <div class="book-entry">
-            <div class="book-title">The Catcher in the Rye</div>
-            <div class="book-author">by J.D. Salinger (1951)</div>
-            <div class="reason">
-              <strong>Challenged for:</strong> Profanity, sexual references, blasphemy, undermining of values
-            </div>
-            <p>
-              This iconic coming-of-age novel has been banned and challenged since its publication. Its frank depiction of teenage angst, alienation, and rebellion has made it both beloved by readers and targeted by censors who view it as corrupting to youth.
-            </p>
-          </div>
-
-          <div class="book-entry">
-            <div class="book-title">1984</div>
-            <div class="book-author">by George Orwell (1949)</div>
-            <div class="reason">
-              <strong>Challenged for:</strong> Political themes, sexual content, pro-communist ideology
-            </div>
-            <p>
-              Ironically, this dystopian novel about totalitarian censorship and thought control has itself been censored. It has been challenged by both conservative groups for sexual content and leftist governments for its critique of authoritarianism.
-            </p>
-          </div>
-
-          <div class="book-entry">
-            <div class="book-title">The Adventures of Huckleberry Finn</div>
-            <div class="book-author">by Mark Twain (1884)</div>
-            <div class="reason">
-              <strong>Challenged for:</strong> Racial slurs, coarse language, depiction of race relations
-            </div>
-            <p>
-              Mark Twain's masterpiece satirizing racism in pre-Civil War America has been continuously challenged since publication. While Twain intended the novel as an indictment of slavery and racism, its use of period-accurate racist language has led to numerous challenges and bans.
-            </p>
-          </div>
-
-          <div class="book-entry">
-            <div class="book-title">Of Mice and Men</div>
-            <div class="book-author">by John Steinbeck (1937)</div>
-            <div class="reason">
-              <strong>Challenged for:</strong> Profanity, racial slurs, violence
-            </div>
-            <p>
-              Steinbeck's novella about migrant workers during the Great Depression remains one of the most challenged books. Its realistic dialogue, including profanity and racial slurs, has led to repeated attempts to remove it from school curricula.
-            </p>
-          </div>
-
-          <div class="book-entry">
-            <div class="book-title">Brave New World</div>
-            <div class="book-author">by Aldous Huxley (1932)</div>
-            <div class="reason">
-              <strong>Challenged for:</strong> Sexual content, drug use, insensitivity to Indigenous peoples
-            </div>
-            <p>
-              This dystopian novel exploring themes of technology, conditioning, and free will has been challenged for its depictions of casual sex, drug use, and suicide. Critics have also objected to its use of "savage" to describe Indigenous peoples.
-            </p>
-          </div>
-
-          <div class="book-entry">
-            <div class="book-title">The Great Gatsby</div>
-            <div class="book-author">by F. Scott Fitzgerald (1925)</div>
-            <div class="reason">
-              <strong>Challenged for:</strong> Sexual references, language, portrayal of adultery
-            </div>
-            <p>
-              This quintessential American novel has faced challenges for its references to adultery, its language, and what some consider an irreverent attitude toward marriage and traditional values.
-            </p>
-          </div>
-
-          <div class="book-entry">
-            <div class="book-title">The Color Purple</div>
-            <div class="book-author">by Alice Walker (1982)</div>
-            <div class="reason">
-              <strong>Challenged for:</strong> Sexual content, violence, offensive language, homosexuality
-            </div>
-            <p>
-              This Pulitzer Prize-winning novel about African American women in the early 20th century South has been repeatedly challenged for its frank depictions of sexual abuse, violence, and lesbian relationships, despite its powerful message about resilience and self-discovery.
-            </p>
-          </div>
-
-          <div class="book-entry">
-            <div class="book-title">Slaughterhouse-Five</div>
-            <div class="book-author">by Kurt Vonnegut (1969)</div>
-            <div class="reason">
-              <strong>Challenged for:</strong> Profanity, violence, obscenity, anti-war sentiment
-            </div>
-            <p>
-              Vonnegut's anti-war novel combining science fiction with the author's experiences as a prisoner of war has been challenged for its profanity, sexual references, and perceived anti-American or anti-Christian sentiment.
-            </p>
-          </div>
 
           <blockquote>
-            "The books that the world calls immoral are books that show the world its own shame." — Oscar Wilde
+            "Censorship is telling a man he can't have a steak just because a baby can't chew it." — Mark Twain
           </blockquote>
-        </div>
 
-        <div id="Contemporary" class="tabs" style="display: none">
-          <h2>Banned Contemporary Adult Fiction</h2>
           <p>
-            Contemporary novels continue to face censorship challenges, often for addressing current social issues, depicting diverse experiences, or including content deemed sexually explicit or politically controversial.
+            According to the American Library Association (ALA), there has been a dramatic increase in book challenges and bans in recent years. In 2022 alone, over 1,200 unique titles were challenged, the highest number of attempted book bans since the ALA began compiling data about censorship in libraries more than 20 years ago. These challenges predominantly target books by or about people of color and LGBTQ+ individuals.
           </p>
 
-          <div class="book-entry">
-            <div class="book-title">The Handmaid's Tale</div>
-            <div class="book-author">by Margaret Atwood (1985)</div>
-            <div class="reason">
-              <strong>Challenged for:</strong> Sexual content, anti-Christian themes, profanity
-            </div>
-            <p>
-              This dystopian novel about a totalitarian theocracy that subjugates women has been challenged for its frank depictions of sexual violence and what some view as anti-religious content, though Atwood has stated the novel is a warning about extremism, not a critique of faith itself.
-            </p>
-          </div>
-
-          <div class="book-entry">
-            <div class="book-title">Beloved</div>
-            <div class="book-author">by Toni Morrison (1987)</div>
-            <div class="reason">
-              <strong>Challenged for:</strong> Violence, sexual content, depiction of bestiality
-            </div>
-            <p>
-              Morrison's Pulitzer Prize-winning novel about the psychological trauma of slavery has been challenged for its intense depictions of violence and sexual abuse, despite being widely considered one of the most important American novels.
-            </p>
-          </div>
-
-          <div class="book-entry">
-            <div class="book-title">The Kite Runner</div>
-            <div class="book-author">by Khaled Hosseini (2003)</div>
-            <div class="reason">
-              <strong>Challenged for:</strong> Sexual violence, offensive language, religious viewpoint
-            </div>
-            <p>
-              This novel about friendship and redemption in Afghanistan has been challenged for its depiction of sexual assault, particularly of a child, and for its portrayal of Afghan culture and Islam.
-            </p>
-          </div>
-
-          <div class="book-entry">
-            <div class="book-title">Thirteen Reasons Why</div>
-            <div class="book-author">by Jay Asher (2007)</div>
-            <div class="reason">
-              <strong>Challenged for:</strong> Discussion of suicide, sexual assault, drug use
-            </div>
-            <p>
-              This novel about a teen's suicide and the events leading to it has been challenged for potentially encouraging suicide, despite many mental health professionals and educators viewing it as an opportunity to discuss teen mental health.
-            </p>
-          </div>
-
-          <div class="book-entry">
-            <div class="book-title">Speak</div>
-            <div class="book-author">by Laurie Halse Anderson (1999)</div>
-            <div class="reason">
-              <strong>Challenged for:</strong> Sexual content, profanity, discussion of rape
-            </div>
-            <p>
-              This acclaimed novel about a high school student dealing with the aftermath of sexual assault has been repeatedly challenged, despite many survivors crediting the book with helping them process their own experiences and find their voice.
-            </p>
-          </div>
-
-          <blockquote>
-            "Books are the most patient and faithful of all friends; they have the knack of remaining quiet while the reader is given time to think." — Mortimer J. Adler
-          </blockquote>
-        </div>
-
-        <div id="Youth" class="tabs" style="display: none">
-          <h2>Banned Young Adult Literature</h2>
           <p>
-            Young adult literature faces particularly intense scrutiny and censorship efforts, with challengers often citing concerns about age-appropriateness. However, many of these books address issues that young people themselves face daily.
+            Books are typically challenged for containing materials deemed "sexually explicit," having "offensive language," being "unsuited to age group," containing "LGBTQ+ content," featuring "religious viewpoint," discussing "violence," addressing "racism," or exploring "political viewpoint." Often, books that address difficult topics like racism, sexual abuse, or LGBTQ+ experiences are targeted precisely because they give voice to marginalized communities and validate the experiences of young readers who see themselves reflected in these stories.
           </p>
 
-          <div class="book-entry">
-            <div class="book-title">The Perks of Being a Wallflower</div>
-            <div class="book-author">by Stephen Chbosky (1999)</div>
-            <div class="reason">
-              <strong>Challenged for:</strong> Homosexuality, drug use, sexual content, profanity
-            </div>
-            <p>
-              This coming-of-age epistolary novel has been challenged for its frank discussions of mental health, sexuality, and teen experiences with drugs and alcohol. Supporters argue these honest depictions help teens feel less alone.
-            </p>
-          </div>
-
-          <div class="book-entry">
-            <div class="book-title">The Absolutely True Diary of a Part-Time Indian</div>
-            <div class="book-author">by Sherman Alexie (2007)</div>
-            <div class="reason">
-              <strong>Challenged for:</strong> Profanity, sexual references, offensive language, anti-Christian content
-            </div>
-            <p>
-              This semi-autobiographical novel about a Native American teenager has been frequently challenged despite its National Book Award and its authentic portrayal of contemporary Native American life.
-            </p>
-          </div>
-
-          <div class="book-entry">
-            <div class="book-title">Looking for Alaska</div>
-            <div class="book-author">by John Green (2005)</div>
-            <div class="reason">
-              <strong>Challenged for:</strong> Sexual content, smoking, drinking, profanity
-            </div>
-            <p>
-              Green's debut novel about teenagers at a boarding school has been challenged for depicting teen drinking, smoking, and sexual activity, despite addressing grief, friendship, and the search for meaning.
-            </p>
-          </div>
-
-          <div class="book-entry">
-            <div class="book-title">The Hate U Give</div>
-            <div class="book-author">by Angie Thomas (2017)</div>
-            <div class="reason">
-              <strong>Challenged for:</strong> Drug use, profanity, discussion of police brutality
-            </div>
-            <p>
-              This powerful novel about a Black teenager who witnesses a police shooting has been challenged for its language and portrayal of law enforcement, despite critical acclaim for its honest depiction of systemic racism and police violence.
-            </p>
-          </div>
-
-          <div class="book-entry">
-            <div class="book-title">Drama</div>
-            <div class="book-author">by Raina Telgemeier (2012)</div>
-            <div class="reason">
-              <strong>Challenged for:</strong> LGBTQ+ characters, perceived sexual content
-            </div>
-            <p>
-              This graphic novel about a middle school theater production has been one of the most challenged books simply for including LGBTQ+ characters, despite the content being appropriate for its intended middle-grade audience.
-            </p>
-          </div>
-
-          <div class="book-entry">
-            <div class="book-title">The Bluest Eye</div>
-            <div class="book-author">by Toni Morrison (1970)</div>
-            <div class="reason">
-              <strong>Challenged for:</strong> Sexual content, child sexual abuse, offensive language
-            </div>
-            <p>
-              Morrison's first novel about a young Black girl's desire for blue eyes has been challenged for its unflinching depiction of child sexual abuse and internalized racism, though advocates argue these difficult topics deserve serious literary treatment.
-            </p>
-          </div>
-
-          <blockquote>
-            "A book is a loaded gun in the house next door. Burn it. Take the shot from the weapon." — Ray Bradbury, Fahrenheit 451
-          </blockquote>
-        </div>
-
-        <div id="Childrens" class="tabs" style="display: none">
-          <h2>Banned Children's Books</h2>
           <p>
-            Even books written for the youngest readers face censorship. Picture books and early readers have been challenged for diverse representation, acknowledgment of difficult topics, or perceived political messaging.
+            The First Amendment protects freedom of speech and expression, which includes the right to read. While parents certainly have the right to guide their own children's reading, book bans in schools and libraries restrict access for all students and community members. They represent a form of censorship that limits intellectual freedom and the free exchange of ideas.
           </p>
 
-          <div class="book-entry">
-            <div class="book-title">And Tango Makes Three</div>
-            <div class="book-author">by Justin Richardson and Peter Parnell (2005)</div>
-            <div class="reason">
-              <strong>Challenged for:</strong> Homosexuality, same-sex parenting
-            </div>
-            <p>
-              Based on a true story of two male penguins in New York's Central Park Zoo who raised a chick together, this picture book has been one of the most challenged books for over a decade. Critics object to its positive portrayal of same-sex parenting.
-            </p>
-          </div>
-
-          <div class="book-entry">
-            <div class="book-title">Captain Underpants series</div>
-            <div class="book-author">by Dav Pilkey (1997-present)</div>
-            <div class="reason">
-              <strong>Challenged for:</strong> Offensive language, unsuited for age group, violence
-            </div>
-            <p>
-              This hugely popular series has been challenged for potty humor, perceived disrespect for authority, and later books' inclusion of a gay character. Despite challenges, the books have been credited with encouraging reluctant readers.
-            </p>
-          </div>
-
-          <div class="book-entry">
-            <div class="book-title">Where the Wild Things Are</div>
-            <div class="book-author">by Maurice Sendak (1963)</div>
-            <div class="reason">
-              <strong>Challenged for:</strong> Encouraging children's disobedience, dark themes
-            </div>
-            <p>
-              This classic picture book faced challenges when first published for depicting a child being disobedient and sent to bed without supper. Critics worried it would encourage bad behavior, while supporters saw it as validating children's emotions.
-            </p>
-          </div>
-
-          <div class="book-entry">
-            <div class="book-title">The Giving Tree</div>
-            <div class="book-author">by Shel Silverstein (1964)</div>
-            <div class="reason">
-              <strong>Challenged for:</strong> Sexism, portrayal of unhealthy relationships
-            </div>
-            <p>
-              Silverstein's tale of a tree's devotion to a boy has been challenged for depicting what some see as an unhealthy, one-sided relationship that could teach children to accept exploitation.
-            </p>
-          </div>
-
-          <div class="book-entry">
-            <div class="book-title">A Light in the Attic</div>
-            <div class="book-author">by Shel Silverstein (1981)</div>
-            <div class="reason">
-              <strong>Challenged for:</strong> Encourages disobedience, occult references
-            </div>
-            <p>
-              This poetry collection has been challenged for poems that allegedly encourage children to break dishes, be messy, or talk back to parents. Some challengers have even claimed certain poems promote Satan worship.
-            </p>
-          </div>
-
-          <div class="book-entry">
-            <div class="book-title">Harry Potter series</div>
-            <div class="book-author">by J.K. Rowling (1997-2007)</div>
-            <div class="reason">
-              <strong>Challenged for:</strong> Witchcraft, occult themes, anti-family messages
-            </div>
-            <p>
-              Despite being one of the most beloved children's book series ever written, Harry Potter has been consistently challenged for its depictions of wizardry and magic, which some religious groups view as promoting occultism.
-            </p>
-          </div>
-
-          <div class="book-entry">
-            <div class="book-title">In the Night Kitchen</div>
-            <div class="book-author">by Maurice Sendak (1970)</div>
-            <div class="reason">
-              <strong>Challenged for:</strong> Nudity (child depicted naked)
-            </div>
-            <p>
-              This surreal picture book has been challenged and even had pages physically altered in some libraries because it depicts a young boy naked. Sendak defended the innocence of childhood nudity in the context of a dream sequence.
-            </p>
-          </div>
-
-          <blockquote>
-            "You don't have to burn books to destroy a culture. Just get people to stop reading them." — Ray Bradbury
-          </blockquote>
-        </div>
-
-        <div id="LGBTQ" class="tabs" style="display: none">
-          <h2>Books with LGBTQ+ Themes</h2>
+          <h3>The Impact of Book Banning</h3>
           <p>
-            Books featuring LGBTQ+ characters or themes face disproportionate censorship. According to PEN America, 41% of books banned in the 2021-2022 school year contained LGBTQ+ characters or themes. These challenges deny LGBTQ+ youth the opportunity to see themselves reflected in literature and prevent all readers from accessing diverse perspectives.
+            Book banning has profound effects on education, literacy, and democratic values. When books are removed from libraries and classrooms, students lose access to diverse perspectives, historical contexts, and stories that might help them understand themselves and others. Censorship particularly impacts marginalized communities whose stories are most often targeted for removal.
           </p>
 
-          <div class="book-entry">
-            <div class="book-title">Gender Queer: A Memoir</div>
-            <div class="book-author">by Maia Kobabe (2019)</div>
-            <div class="reason">
-              <strong>Challenged for:</strong> LGBTQ+ content, sexual content, not suited for age group
-            </div>
-            <p>
-              This graphic memoir about the author's journey with gender identity has been the most challenged book in America for multiple years. It has been targeted in coordinated campaigns despite being placed in high school libraries and addressing common questions about gender.
-            </p>
-          </div>
-
-          <div class="book-entry">
-            <div class="book-title">All Boys Aren't Blue</div>
-            <div class="book-author">by George M. Johnson (2020)</div>
-            <div class="reason">
-              <strong>Challenged for:</strong> LGBTQ+ content, sexual content, profanity
-            </div>
-            <p>
-              This memoir exploring the author's childhood and adolescence as a Black queer person has been targeted in numerous states. Johnson has spoken out about how banning their book silences Black queer voices and denies LGBTQ+ youth of color the representation they need.
-            </p>
-          </div>
-
-          <div class="book-entry">
-            <div class="book-title">The Perks of Being a Wallflower</div>
-            <div class="book-author">by Stephen Chbosky (1999)</div>
-            <div class="reason">
-              <strong>Challenged for:</strong> Homosexuality, sexual content, drug use
-            </div>
-            <p>
-              This coming-of-age novel featuring LGBTQ+ characters has been challenged for years, with particular focus on its positive portrayal of a gay character and frank discussions about sexuality and identity.
-            </p>
-          </div>
-
-          <div class="book-entry">
-            <div class="book-title">This Book Is Gay</div>
-            <div class="book-author">by Juno Dawson (2014)</div>
-            <div class="reason">
-              <strong>Challenged for:</strong> LGBTQ+ content, sexual content, political viewpoint
-            </div>
-            <p>
-              This non-fiction guide for LGBTQ+ teens has been challenged despite providing factual information about sexual orientation and gender identity. The book addresses common questions from teens exploring their identity.
-            </p>
-          </div>
-
-          <div class="book-entry">
-            <div class="book-title">I Am Jazz</div>
-            <div class="book-author">by Jessica Herthel and Jazz Jennings (2014)</div>
-            <div class="reason">
-              <strong>Challenged for:</strong> Transgender character, age-inappropriate sex education
-            </div>
-            <p>
-              This picture book based on the real life of transgender activist Jazz Jennings has been challenged in elementary schools despite its age-appropriate content simply explaining what it means to be transgender.
-            </p>
-          </div>
-
-          <div class="book-entry">
-            <div class="book-title">George (now published as Melissa)</div>
-            <div class="book-author">by Alex Gino (2015)</div>
-            <div class="reason">
-              <strong>Challenged for:</strong> Transgender character, sexual content (none present)
-            </div>
-            <p>
-              This middle-grade novel about a transgender girl has been one of the most challenged books despite containing no sexual content. It simply tells the story of a young person understanding and expressing their gender identity.
-            </p>
-          </div>
-
-          <div class="book-entry">
-            <div class="book-title">Fun Home: A Family Tragicomic</div>
-            <div class="book-author">by Alison Bechdel (2006)</div>
-            <div class="reason">
-              <strong>Challenged for:</strong> LGBTQ+ content, sexual content, unsuited for age group
-            </div>
-            <p>
-              This acclaimed graphic memoir about Bechdel's relationship with her gay father and her own coming out has been challenged in college classrooms, sparking debates about intellectual freedom in higher education.
-            </p>
-          </div>
-
-          <blockquote>
-            "Once you learn to read, you will be forever free." — Frederick Douglass
-          </blockquote>
-        </div>
-
-        <div id="Race" class="tabs" style="display: none">
-          <h2>Books Addressing Race and Identity</h2>
           <p>
-            Books by authors of color and books addressing racism, particularly anti-Black racism, face disproportionate challenges. According to PEN America's analysis, 40% of banned book titles feature characters of color or address race and racism. These bans often occur under the guise of protecting children from "divisive concepts" or "critical race theory," but they effectively silence discussions about America's racial history and present.
+            Librarians and educators face increasing pressure and threats when defending intellectual freedom. Many report self-censorship, avoiding purchasing books that might be challenged, which further limits access to diverse literature. Teachers modify curricula to avoid controversy, and some have faced termination for refusing to remove books from their classrooms.
           </p>
 
-          <div class="book-entry">
-            <div class="book-title">The Bluest Eye</div>
-            <div class="book-author">by Toni Morrison (1970)</div>
-            <div class="reason">
-              <strong>Challenged for:</strong> Sexual content, offensive language, depictions of child abuse
-            </div>
-            <p>
-              Morrison's debut novel exploring internalized racism and colorism in the Black community has been challenged for its unflinching portrayal of sexual abuse, though advocates note the book's literary merit and importance in discussing racial trauma.
-            </p>
-          </div>
-
-          <div class="book-entry">
-            <div class="book-title">The Hate U Give</div>
-            <div class="book-author">by Angie Thomas (2017)</div>
-            <div class="reason">
-              <strong>Challenged for:</strong> Profanity, drug use, anti-police message
-            </div>
-            <p>
-              This novel about a Black teenager who witnesses police shoot her unarmed friend has been challenged for being "anti-police" and containing profanity, despite its nuanced treatment of community, family, and activism.
-            </p>
-          </div>
-
-          <div class="book-entry">
-            <div class="book-title">Between the World and Me</div>
-            <div class="book-author">by Ta-Nehisi Coates (2015)</div>
-            <div class="reason">
-              <strong>Challenged for:</strong> Anti-police message, political viewpoint, profanity
-            </div>
-            <p>
-              Written as a letter to his son, Coates's meditation on being Black in America has been removed from reading lists for allegedly being "anti-police" and promoting a particular political viewpoint.
-            </p>
-          </div>
-
-          <div class="book-entry">
-            <div class="book-title">Stamped: Racism, Antiracism, and You</div>
-            <div class="book-author">by Jason Reynolds and Ibram X. Kendi (2020)</div>
-            <div class="reason">
-              <strong>Challenged for:</strong> Political viewpoint, selective storytelling, author's public statements
-            </div>
-            <p>
-              This young adult adaptation of Kendi's "Stamped from the Beginning" traces the history of racist ideas in America. It has been challenged as part of broader attempts to ban discussions of systemic racism in schools.
-            </p>
-          </div>
-
-          <div class="book-entry">
-            <div class="book-title">New Kid</div>
-            <div class="book-author">by Jerry Craft (2019)</div>
-            <div class="reason">
-              <strong>Challenged for:</strong> Critical race theory, discussion of racism
-            </div>
-            <p>
-              This Newbery Medal-winning graphic novel about a Black student's experiences at a predominantly white private school has been challenged for addressing racism and microaggressions, despite being appropriate for its middle-grade audience.
-            </p>
-          </div>
-
-          <div class="book-entry">
-            <div class="book-title">Born a Crime: Stories from a South African Childhood</div>
-            <div class="book-author">by Trevor Noah (2016)</div>
-            <div class="reason">
-              <strong>Challenged for:</strong> Profanity, mature themes, racial discussions
-            </div>
-            <p>
-              Noah's memoir about growing up in apartheid and post-apartheid South Africa has been challenged for its frank discussions of race, colonialism, and poverty, as well as its language.
-            </p>
-          </div>
-
-          <div class="book-entry">
-            <div class="book-title">The 1619 Project: Born on the Water</div>
-            <div class="book-author">by Nikole Hannah-Jones and Renée Watson (2021)</div>
-            <div class="reason">
-              <strong>Challenged for:</strong> Critical race theory, historical inaccuracy, political viewpoint
-            </div>
-            <p>
-              This children's book explaining American slavery history has been caught up in broader political battles over how slavery and racism should be taught in schools.
-            </p>
-          </div>
-
-          <div class="book-entry">
-            <div class="book-title">American Born Chinese</div>
-            <div class="book-author">by Gene Luen Yang (2006)</div>
-            <div class="reason">
-              <strong>Challenged for:</strong> Racial stereotypes, offensive language, religious viewpoint
-            </div>
-            <p>
-              This groundbreaking graphic novel exploring the Asian American experience has been challenged for its use of stereotypical imagery, even though the book explicitly addresses and critiques these stereotypes.
-            </p>
-          </div>
-
-          <blockquote>
-            "There is no greater agony than bearing an untold story inside you." — Maya Angelou
-          </blockquote>
-        </div>
-
-        <div id="Resources" class="tabs" style="display: none">
-          <h2>How to Fight Book Banning</h2>
-          <p>
-            Individuals can take action to support intellectual freedom and oppose censorship in their communities. Here are ways to get involved:
-          </p>
-
-          <h3>Support Your Local Library</h3>
-          <ul class="list">
-            <li>Attend library board meetings and speak up for intellectual freedom</li>
-            <li>Support librarians facing pressure to remove books</li>
-            <li>Check out challenged books to show they're valued by the community</li>
-            <li>Donate to library foundations that support diverse collections</li>
-            <li>Volunteer to support library programs and services</li>
-          </ul>
-
-          <h3>Get Involved in Your School District</h3>
-          <ul class="list">
-            <li>Attend school board meetings and speak during public comment periods</li>
-            <li>Learn your district's book challenge process and participate in review committees</li>
-            <li>Support teachers and school librarians facing pressure</li>
-            <li>Run for school board or support candidates who defend intellectual freedom</li>
-            <li>Connect with other parents who support diverse, inclusive education</li>
-          </ul>
-
-          <h3>Advocate and Educate</h3>
-          <ul class="list">
-            <li>Write letters to the editor of local newspapers</li>
-            <li>Contact your state and local representatives</li>
-            <li>Share information about book banning on social media</li>
-            <li>Organize community conversations about intellectual freedom</li>
-            <li>Participate in Banned Books Week events</li>
-          </ul>
-
-          <h3>Organizations Working Against Censorship</h3>
+          <h3>Resources and Further Reading:</h3>
           <ul class="list">
             <li>
               <a href="https://www.ala.org/advocacy/bbooks" target="_blank">
-                American Library Association - Office for Intellectual Freedom
+                American Library Association - Banned & Challenged Books
               </a>
             </li>
-            <li>
-              <a href="https://pen.org/issue/book-bans/" target="_blank">
-                PEN America - Book Ban Resources
-              </a>
-            </li>
-            <li>
-              <a href="https://ncac.org/book-censorship-toolkit" target="_blank">
-                National Coalition Against Censorship - Toolkit
-              </a>
-            </li>
-            <li>
-              <a href="https://www.aclu.org/issues/free-speech" target="_blank">
-                ACLU - Free Speech
-              </a>
-            </li>
-            <li>
-              <a href="https://www.ala.org/advocacy/intfreedom/censorship/fightcensorship" target="_blank">
-                ALA's Strategies for Fighting Censorship
-              </a>
-            </li>
-          </ul>
-
-          <h3>Further Reading</h3>
-          <ul class="list">
             <li>
               <a href="https://pen.org/report/banned-usa-growing-movement-to-censor-books-in-schools/" target="_blank">
-                PEN America's "Banned in the USA" Report
+                PEN America - Educational Censorship Report
               </a>
             </li>
             <li>
-              <a href="https://www.ala.org/advocacy/bbooks/frequentlychallengedbooks" target="_blank">
-                ALA's List of Most Challenged Books
+              <a href="https://www.ncac.org/" target="_blank">
+                National Coalition Against Censorship
               </a>
             </li>
             <li>
-              <a href="https://www.tolerance.org/magazine/spring-2017/what-to-do-when-a-book-is-challenged" target="_blank">
-                Teaching Tolerance: What to Do When a Book Is Challenged
+              <a href="https://www.aclu.org/other/what-censorship" target="_blank">
+                ACLU - What is Censorship?
+              </a>
+            </li>
+            <li>
+              <a href="https://bannedbooksweek.org/" target="_blank">
+                Banned Books Week
               </a>
             </li>
           </ul>
 
           <blockquote>
-            "Think for yourselves and let others enjoy the privilege to do so too." — Voltaire
-          </blockquote>
-
-          <h3>Understanding Your Rights</h3>
-          <p>
-            The First Amendment protects freedom of speech and expression, including the right to read. While parents have the right to guide their own children's reading, they do not have the right to restrict what other families can access. Courts have consistently held that school libraries serve an important educational function and that the removal of books must not be done to suppress ideas.
-          </p>
-
-          <p>
-            In the landmark case <em>Board of Education, Island Trees Union Free School District No. 26 v. Pico</em> (1982), the Supreme Court held that school officials cannot remove books from libraries "simply because they dislike the ideas contained in those books."
-          </p>
-
-          <h3>Stay Informed</h3>
-          <p>
-            Book banning efforts are constantly evolving. Stay informed about challenges in your community and state by:
-          </p>
-          <ul class="list">
-            <li>Following local news coverage of school board meetings</li>
-            <li>Subscribing to newsletters from anti-censorship organizations</li>
-            <li>Joining community groups focused on education and civil liberties</li>
-            <li>Monitoring your state legislature for bills restricting teaching or library collections</li>
-          </ul>
-
-          <blockquote>
-            "Wherever they burn books, in the end will also burn human beings." — Heinrich Heine
+            "There is more than one way to burn a book. And the world is full of people running about with lit matches." — Ray Bradbury
           </blockquote>
         </div>
       </main>
       <hr />
-      <footer style="text-align: center; padding: 20px 0;">
+      <footer>
         <p>
           <em>"The freedom to read is essential to our democracy. It is continuously under attack."</em><br>
           — American Library Association
         </p>
-        <p style="font-size: 0.9em; margin-top: 15px;">
+        <p>
           This resource is for educational purposes. All book descriptions are based on documented challenges<br>
           as reported by the American Library Association, PEN America, and other civil liberties organizations.
         </p>
       </footer>
     </div>
-    <script>
-      function openTabs(tabName) {
-        var i, tabs;
-        tabs = document.getElementsByClassName("tabs");
-        for (i = 0; i < tabs.length; i++) {
-          tabs[i].style.display = "none";
-        }
-        document.getElementById(tabName).style.display = "block";
-      }
-    </script>
   </body>
 </html>
