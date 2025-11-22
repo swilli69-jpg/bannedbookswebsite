@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Children's Books | Banned Books</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="content">
+      <header>
+        <h1>Banned Books in America</h1>
+        <p class="header-subtitle">A Chronicle of Literary Censorship</p>
+      </header>
+
+      <main>
+        <nav class="flex">
+          <a href="index.html" class="tab">About</a>
+          <a href="classicbooks.html" class="tab">Classic Literature</a>
+          <a href="contemporarybooks.html" class="tab">Contemporary</a>
+          <a href="childrensbooks.html" class="tab">Children's Books</a>
+          <a href="LGBTQbooks.html" class="tab">LGBTQ+ Themes</a>
+          <a href="racebooks.html" class="tab">Race & Identity</a>
+          <a href="resources.html" class="tab">Resources</a>
+        </nav>
+
+        <h2>Banned Children's Books</h2>
+        <p>
+          Even books written for the youngest readers face censorship. Picture books and early readers have been challenged for diverse representation, acknowledgment of difficult topics, or perceived political messaging.
+        </p>
+
+        <div class="book-entry">
+          <div class="book-title">And Tango Makes Three</div>
+          <div class="book-author">by Justin Richardson and Peter Parnell (2005)</div>
+          <div class="reason">
+            <strong>Challenged for:</strong> Homosexuality, same-sex parenting
+          </div>
+          <p>
+            Based on a true story of two male penguins in New York's Central Park Zoo who raised a chick together, this picture book has been one of the most challenged books for over a decade. Critics object to its positive portrayal of same-sex parenting.
+          </p>
+        </div>
+
+        <div class="book-entry">
+          <div class="book-title">Captain Underpants series</div>
+          <div class="book-author">by Dav Pilkey (1997-present)</div>
+          <div class="reason">
+            <strong>Challenged for:</strong> Offensive language, unsuited for age group, violence
+          </div>
+          <p>
+            This hugely popular series has been challenged for potty humor, perceived disrespect for authority, and later books' inclusion of a gay character. Despite challenges, the books have been credited with encouraging reluctant readers.
+          </p>
+        </div>
+
+        <div class="book-entry">
+          <div class="book-title">Where the Wild Things Are</div>
+          <div class="book-author">by Maurice Sendak (1963)</div>
+          <div class="reason">
+            <strong>Challenged for:</strong> Encouraging children's disobedience, dark themes
+          </div>
+          <p>
+            This classic picture book faced challenges when first published for depicting a child being disobedient and sent to bed without supper. Critics worried it would encourage bad behavior, while supporters saw it as validating children's emotions.
+          </p>
+        </div>
+
+        <div class="book-entry">
+          <div class="book-title">The Giving Tree</div>
+          <div class="book-author">by Shel Silverstein (1964)</div>
+          <div class="reason">
+            <strong>Challenged for:</strong> Sexism, portrayal of unhealthy relationships
+          </div>
+          <p>
+            Silverstein's tale of a tree's devotion to a boy has been challenged for depicting what some see as an unhealthy, one-sided relationship that could teach children to accept exploitation.
+          </p>
+        </div>
+
+        <div class="book-entry">
+          <div class="book-title">A Light in the Attic</div>
+          <div class="book-author">by Shel Silverstein (1981)</div>
+          <div class="reason">
+            <strong>Challenged for:</strong> Encourages disobedience, occult references
+          </div>
+          <p>
+            This poetry collection has been challenged for poems that allegedly encourage children to break dishes, be messy, or talk back to parents. Some challengers have even claimed certain poems promote Satan worship.
+          </p>
+        </div>
+
+        <div class="book-entry">
+          <div class="book-title">Harry Potter series</div>
+          <div class="book-author">by J.K. Rowling (1997-2007)</div>
+          <div class="reason">
+            <strong>Challenged for:</strong> Witchcraft, occult themes, anti-family messages
+          </div>
+          <p>
+            Despite being one of the most beloved children's book series ever written, Harry Potter has been consistently challenged for its depictions of wizardry and magic, which some religious groups view as promoting occultism.
+          </p>
+        </div>
+
+        <div class="book-entry">
+          <div class="book-title">In the Night Kitchen</div>
+          <div class="book-author">by Maurice Sendak (1970)</div>
+          <div class="reason">
+            <strong>Challenged for:</strong> Nudity (child depicted naked)
+          </div>
+          <p>
+            This surreal picture book has been challenged and even had pages physically altered in some libraries because it depicts a young boy naked. Sendak defended the innocence of childhood nudity in the context of a dream sequence.
+          </p>
+        </div>
+
+        <blockquote>
+          "You don't have to burn books to destroy a culture. Just get people to stop reading them." — Ray Bradbury
+        </blockquote>
+      </main>
+      <hr />
+      <footer>
+        <p>
+          <em>"The freedom to read is essential to our democracy. It is continuously under attack."</em><br>
+          — American Library Association
+        </p>
+        <p>
+          This resource is for educational purposes. All book descriptions are based on documented challenges<br>
+          as reported by the American Library Association, PEN America, and other civil liberties organizations.
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>
