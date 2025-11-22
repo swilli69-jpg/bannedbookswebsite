@@ -27,6 +27,14 @@ body {
   background-color: var(--bg);
   color: var(--text);
   padding: 20px;
+  background-image: url("medieval_right_background.png"),
+    url("medieval_left_background.png"),
+    url("images/background/parchment.jpg");
+  background-position: right top, left top, right top;
+  background-repeat: repeat-y, repeat-y, repeat;
+  background-attachment: scroll, scroll, scroll;
+  cursor: url("frog_cursor.png"), auto;
+  image-rendering: auto;
 }
 
 /* TYPOGRAPHY */
@@ -96,6 +104,7 @@ a:hover {
   color: var(--primary-hover);
   text-decoration: none;
   border-bottom: 1px solid var(--primary-hover);
+  cursor: url("frog_cursor.png"), auto;
 }
 
 /* LAYOUT */
@@ -114,6 +123,11 @@ header {
   margin-bottom: 30px;
 }
 
+.header-subtitle {
+  text-align: center;
+  font-style: italic;
+}
+
 main {
   min-height: 500px;
 }
@@ -122,6 +136,17 @@ footer {
   border-top: 3px double var(--border);
   margin-top: 40px;
   padding-top: 20px;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+footer p:first-of-type {
+  margin-bottom: 0;
+}
+
+footer p:last-of-type {
+  font-size: 0.9em;
+  margin-top: 15px;
 }
 
 /* NAVIGATION TABS */
@@ -150,11 +175,12 @@ footer {
 }
 
 .tab:hover {
-  background-color: var(--primary);
-  color: var(--bg);
-  border-color: var(--primary);
+  background-color: #c3837f;
+  color: #663431;
+  border-color: #663431;
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: url("frog_cursor.png"), auto;
 }
 
 .tab:active {
@@ -268,6 +294,17 @@ blockquote p {
 
 /* IMAGES */
 
+.icons {
+  filter: none;
+  margin-top: 25px;
+}
+
+.icontext {
+  background-color: #d4c5b0;
+  color: #8b1a1a;
+  border: solid 4px #8b1a1a;
+}
+
 figure {
   margin: 20px 0;
   text-align: center;
@@ -283,6 +320,11 @@ figure.right {
   float: right;
   margin: 0 0 15px 20px;
   max-width: 400px;
+}
+
+figure.nofloat {
+  float: none;
+  margin: 0 auto;
 }
 
 figure img {
@@ -316,6 +358,11 @@ hr {
   text-align: center;
 }
 
+.text-left {
+  text-align: left;
+  padding-bottom: 30px;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -330,9 +377,24 @@ hr {
 
 /* RESPONSIVE DESIGN */
 
-@media screen and (max-width: 1220px) {
+@media screen and (max-width: 1920px) {
+  body {
+    background-size: 20%, 20%, auto;
+  }
   .content {
-    width: 90%;
+    width: 58%;
+  }
+}
+
+@media screen and (max-width: 1220px) {
+  body {
+    background-image: url("images/background/parchment.jpg");
+    background-position: right top;
+    background-repeat: repeat;
+    background-attachment: scroll;
+  }
+  .content {
+    width: 80%;
     padding: 20px;
   }
   
@@ -391,6 +453,20 @@ hr {
   p {
     text-align: left;
     text-indent: 10px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  nav a {
+    border-color: #8b1a1a;
+  }
+  .content {
+    width: 100%;
+  }
+  .left, .right {
+    float: none;
+    margin: 15px auto;
+    display: block;
   }
 }
 
