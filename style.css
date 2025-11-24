@@ -1,3 +1,25 @@
+/* BANNED BOOKS THEME - Medieval Manuscript Aesthetic */
+
+@font-face {
+  font-family: 'CloisterBlack';
+  src: url('CloisterBlack.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CodexManesse';
+  src: url('CodexManesse-Oo13.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PfefferMediaeval';
+  src: url('PfefferMediaeval.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
 
 :root {
   --primary: #8b1a1a;
@@ -21,15 +43,15 @@ body {
 }
 
 body {
-  font-family: "Garamond", "Georgia", serif;
+  font-family: "PfefferMediaeval", "Garamond", "Georgia", serif;
   line-height: 1.7;
   background-color: var(--bg);
   color: var(--text);
   padding: 20px;
   background-image: url("medieval_right_background.png"),
     url("medieval_left_background.png"),
-    url("images/background/parchment.jpg");
-  background-position: right top, left top, right top;
+    url("parchment.jpg");
+  background-position: right top, left top, center;
   background-repeat: repeat-y, repeat-y, repeat;
   background-attachment: scroll, scroll, scroll;
   cursor: url("frog_cursor.png"), auto;
@@ -39,7 +61,7 @@ body {
 /* TYPOGRAPHY */
 
 h1 {
-  font-family: "Garamond", "Georgia", serif;
+  font-family: "CodexManesse", "CloisterBlack", "Garamond", "Georgia", serif;
   letter-spacing: 2px;
   font-size: 3rem;
   color: var(--primary);
@@ -49,7 +71,7 @@ h1 {
 }
 
 h2 {
-  font-family: "Garamond", "Georgia", serif;
+  font-family: "CodexManesse", "CloisterBlack", "Garamond", "Georgia", serif;
   letter-spacing: 1px;
   font-size: 2rem;
   color: var(--text);
@@ -59,7 +81,7 @@ h2 {
 }
 
 h3 {
-  font-family: "Garamond", "Georgia", serif;
+  font-family: "CodexManesse", "CloisterBlack", "Garamond", "Georgia", serif;
   font-size: 1.5rem;
   color: var(--text);
   margin: 20px 0 10px;
@@ -106,11 +128,12 @@ a:hover {
   cursor: url("frog_cursor.png"), auto;
 }
 
+/* LAYOUT */
 
 .content {
   max-width: 1000px;
   margin: auto;
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: transparent;
   padding: 30px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
@@ -147,6 +170,7 @@ footer p:last-of-type {
   margin-top: 15px;
 }
 
+/* NAVIGATION TABS */
 
 .flex {
   display: flex;
@@ -162,7 +186,7 @@ footer p:last-of-type {
   background-color: var(--accent);
   color: var(--primary);
   padding: 10px 15px;
-  font-family: "Garamond", "Georgia", serif;
+  font-family: "CodexManesse", "CloisterBlack", "Garamond", "Georgia", serif;
   font-size: 1em;
   border: 3px solid var(--border);
   cursor: pointer;
@@ -184,7 +208,7 @@ footer p:last-of-type {
   transform: translateY(0);
 }
 
-
+/* TABS CONTENT */
 
 .tabs {
   padding: 20px 0;
@@ -200,6 +224,7 @@ footer p:last-of-type {
   }
 }
 
+/* BOOK ENTRIES */
 
 .book-entry {
   margin: 25px 0;
@@ -215,7 +240,7 @@ footer p:last-of-type {
   color: var(--primary);
   font-size: 1.2em;
   margin-bottom: 5px;
-  font-family: "Garamond", "Georgia", serif;
+  font-family: "CodexManesse", "CloisterBlack", "Garamond", "Georgia", serif;
 }
 
 .book-author {
@@ -254,13 +279,13 @@ ul {
 .list li {
   padding: 8px 0 8px 30px;
   margin: 5px 0;
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><text x="0" y="15" font-size="16" fill="%238b1a1a">📖</text></svg>');
+  background-image: url('memento_icon1.png');
   background-position: 0 8px;
-  background-size: 20px 20px;
+  background-size: 20px 25px;
   background-repeat: no-repeat;
 }
 
-
+/* BLOCKQUOTES */
 
 blockquote {
   border-left: 4px solid var(--primary);
@@ -288,7 +313,7 @@ blockquote p {
   text-align: left;
 }
 
-
+/* IMAGES */
 
 .icons {
   filter: none;
@@ -339,7 +364,7 @@ figcaption {
   border: 2px solid var(--border);
 }
 
-
+/* DIVIDERS */
 
 hr {
   border: none;
@@ -348,7 +373,7 @@ hr {
   opacity: 0.5;
 }
 
-
+/* UTILITIES */
 
 .center {
   text-align: center;
@@ -371,7 +396,7 @@ hr {
   border-width: 0;
 }
 
-
+/* RESPONSIVE DESIGN */
 
 @media screen and (max-width: 1920px) {
   body {
@@ -384,8 +409,8 @@ hr {
 
 @media screen and (max-width: 1220px) {
   body {
-    background-image: url("images/background/parchment.jpg");
-    background-position: right top;
+    background-image: url("parchment.jpg");
+    background-position: center;
     background-repeat: repeat;
     background-attachment: scroll;
   }
@@ -488,6 +513,7 @@ hr {
   }
 }
 
+/* PRINT STYLES */
 
 @media print {
   body {
