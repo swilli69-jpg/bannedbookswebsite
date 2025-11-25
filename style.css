@@ -294,7 +294,7 @@ blockquote {
   font-style: italic;
   background-color: rgba(255, 255, 255, 0.5);
   position: relative;
-  quotes: """ """ "'" "'";
+  quotes: "\201C" "\201D" "\2018" "\2019";
 }
 
 blockquote:before {
