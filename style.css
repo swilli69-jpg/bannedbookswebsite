@@ -395,6 +395,53 @@ hr {
   white-space: nowrap;
   border-width: 0;
 }
+.shelf-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.book-row {
+    position: absolute;
+    bottom: 68%;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 60px;
+    padding: 0 10%;
+    z-index: 10;
+}
+
+.book-row a {
+    display: block;
+    border: none !important;
+}
+
+.book-row a:hover {
+    border: none !important;
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+}
+
+.book-cover {
+    width: 140px;
+    height: auto;
+    display: block;
+    border: none !important;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4) !important;
+}
+
+.shelf-image {
+    width: 100%;
+    display: block;
+    position: relative;
+    z-index: 1;
+    border: none !important;
+    box-shadow: none !important;
+}
 
 /* RESPONSIVE DESIGN */
 
