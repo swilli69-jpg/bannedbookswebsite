@@ -60,12 +60,20 @@ xhttp.send();
 
 // Configuration for book previews
 const BOOK_CONFIG = {
+  // Classic Literature
   "ulysses": "ISBN:0192834649",
   "scarlet": "ISBN:0142437263",
   "dubliners": "ISBN:0140186476",
   "tess": "ISBN:0141439599",
   "bovary": "ISBN:1904633099",
-  "jungle": "ISBN:0252014804"
+  "jungle": "ISBN:0252014804",
+  // Contemporary Literature
+  "handmaid": "ISBN:0547345666",
+  "beloved": "ISBN:1400033411",
+  "bluest": "ISBN:0307278441",
+  "caged": "ISBN:1588369250",
+  "mockingbird": "ISBN:0062368680",
+  "lolita": "ISBN:0679723161"
 };
 
 let currentViewer = null;
@@ -103,13 +111,9 @@ function initGoogleBooks() {
 
 // Setup hover events on book covers
 function setupBookHovers() {
+  // Handle book links (for pages with links)
   const bookLinks = document.querySelectorAll('.book-row a');
   console.log("Found " + bookLinks.length + " book links");
-  
-  if (bookLinks.length === 0) {
-    console.log("No book links found - may not be on correct page");
-    return;
-  }
   
   bookLinks.forEach(function(link, index) {
     const href = link.getAttribute('href');
@@ -131,13 +135,54 @@ function setupBookHovers() {
         clearTimeout(previewTimeout);
         previewTimeout = setTimeout(function() {
           showPreview(bookId, e);
-        }, 300); // Small delay before showing
+        }, 300);
       });
       
       link.addEventListener('mouseleave', function() {
         console.log("Mouse left: " + bookId);
         clearTimeout(previewTimeout);
-        setTimeout(hidePreview, 200); // Small delay before hiding
+        setTimeout(hidePreview, 200);
+      });
+    }
+  });
+  
+  // Handle standalone book covers (for pages without links)
+  const bookCovers = document.querySelectorAll('.book-row img.book-cover');
+  console.log("Found " + bookCovers.length + " book cover images");
+  
+  bookCovers.forEach(function(img) {
+    const alt = img.getAttribute('alt');
+    let bookId = null;
+    
+    // Determine which book this is based on the alt text or filename
+    if (alt.includes("Handmaid")) bookId = 'handmaid';
+    else if (alt.includes("Beloved")) bookId = 'beloved';
+    else if (alt.includes("Bluest Eye")) bookId = 'bluest';
+    else if (alt.includes("Caged Bird")) bookId = 'caged';
+    else if (alt.includes("Mocking")) bookId = 'mockingbird';
+    else if (alt.includes("Lolita")) bookId = 'lolita';
+    
+    if (bookId && BOOK_CONFIG[bookId]) {
+      console.log("Setting up hover for image: " + bookId);
+      
+      // Make the image look interactive
+      img.style.cursor = 'pointer';
+      img.style.transition = 'transform 0.2s';
+      
+      img.addEventListener('mouseenter', function(e) {
+        console.log("Mouse entered: " + bookId);
+        img.style.transform = 'translateY(-5px)';
+        clearTimeout(previewTimeout);
+        previewTimeout = setTimeout(function() {
+          showPreview(bookId, e);
+        }, 300);
+      });
+      
+      img.addEventListener('mouseleave', function() {
+        console.log("Mouse left: " + bookId);
+        img.style.transform = 'translateY(0)';
+        clearTimeout(previewTimeout);
+        setTimeout(hidePreview, 200);
       });
     }
   });
