@@ -73,7 +73,14 @@ const BOOK_CONFIG = {
   "bluest": "ISBN:0307278441",
   "caged": "ISBN:1588369250",
   "mockingbird": "ISBN:0062368680",
-  "lolita": "ISBN:0679723161"
+  "lolita": "ISBN:0679723161",
+  // Children's Books
+  "huckfinn": "ISBN:0486280616",
+  "wildthings": "ISBN:0060254920",
+  "givingtree": "ISBN:0061965103",
+  "charlottesweb": "ISBN:0064410935",
+  "heather": "ISBN:0763679895",
+  "goodnightmoon": "ISBN:0694003611"
 };
 
 let currentViewer = null;
@@ -116,16 +123,25 @@ function setupBookHovers() {
   console.log("Found " + bookLinks.length + " book links");
   
   bookLinks.forEach(function(link, index) {
-    const href = link.getAttribute('href');
-    let bookId = null;
+    const img = link.querySelector('img');
+    if (!img) return;
     
-    // Determine which book this is based on the URL
-    if (href.includes('4300')) bookId = 'ulysses';
-    else if (href.includes('25344')) bookId = 'scarlet';
-    else if (href.includes('2814')) bookId = 'dubliners';
-    else if (href.includes('110')) bookId = 'tess';
-    else if (href.includes('2413')) bookId = 'bovary';
-    else if (href.includes('140')) bookId = 'jungle';
+    // First check for data-book-id attribute
+    let bookId = img.getAttribute('data-book-id');
+    
+    // Fall back to href-based detection if no data attribute
+    if (!bookId) {
+      const href = link.getAttribute('href');
+      
+      // Determine which book this is based on the URL
+      if (href.includes('4300')) bookId = 'ulysses';
+      else if (href.includes('25344')) bookId = 'scarlet';
+      else if (href.includes('2814')) bookId = 'dubliners';
+      else if (href.includes('110')) bookId = 'tess';
+      else if (href.includes('2413')) bookId = 'bovary';
+      else if (href.includes('140')) bookId = 'jungle';
+      else if (href.includes('76')) bookId = 'huckfinn';
+    }
     
     if (bookId && BOOK_CONFIG[bookId]) {
       console.log("Setting up hover for: " + bookId);
@@ -151,16 +167,28 @@ function setupBookHovers() {
   console.log("Found " + bookCovers.length + " book cover images");
   
   bookCovers.forEach(function(img) {
-    const alt = img.getAttribute('alt');
-    let bookId = null;
+    // Skip if already handled as part of a link
+    if (img.closest('a')) return;
     
-    // Determine which book this is based on the alt text or filename
-    if (alt.includes("Handmaid")) bookId = 'handmaid';
-    else if (alt.includes("Beloved")) bookId = 'beloved';
-    else if (alt.includes("Bluest Eye")) bookId = 'bluest';
-    else if (alt.includes("Caged Bird")) bookId = 'caged';
-    else if (alt.includes("Mocking")) bookId = 'mockingbird';
-    else if (alt.includes("Lolita")) bookId = 'lolita';
+    // First check for data-book-id attribute
+    let bookId = img.getAttribute('data-book-id');
+    
+    // Fall back to alt text detection if no data attribute
+    if (!bookId) {
+      const alt = img.getAttribute('alt');
+      
+      // Determine which book this is based on the alt text
+      if (alt.includes("Handmaid")) bookId = 'handmaid';
+      else if (alt.includes("Beloved")) bookId = 'beloved';
+      else if (alt.includes("Bluest Eye")) bookId = 'bluest';
+      else if (alt.includes("Caged Bird")) bookId = 'caged';
+      else if (alt.includes("Mocking")) bookId = 'mockingbird';
+      else if (alt.includes("Lolita")) bookId = 'lolita';
+      else if (alt.includes("Wild Things")) bookId = 'wildthings';
+      else if (alt.includes("Giving Tree")) bookId = 'givingtree';
+      else if (alt.includes("Charlotte")) bookId = 'charlottesweb';
+      else if (alt.includes("Goodnight Moon")) bookId = 'goodnightmoon';
+    }
     
     if (bookId && BOOK_CONFIG[bookId]) {
       console.log("Setting up hover for image: " + bookId);
