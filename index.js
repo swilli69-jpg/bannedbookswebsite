@@ -91,7 +91,7 @@ const BOOK_CONFIG = {
   // Race & Identity Books
   "hateugive": "ISBN:006249855X",
   "colorpurple": "ISBN:0156028352",
-  "songsolomon": "ISBN:0307388123,
+  "songsolomon": "ISBN:0307388123,"
   "hoodfeminism": "ISBN:0525560548",
   "project1619": "ISBN:0593230574",
   "nativeson": "ISBN:0061148504"
