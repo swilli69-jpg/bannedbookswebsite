@@ -80,7 +80,14 @@ const BOOK_CONFIG = {
   "givingtree": "ISBN:0061965103",
   "charlottesweb": "ISBN:0064410935",
   "heather": "ISBN:0763679895",
-  "goodnightmoon": "ISBN:0694003611"
+  "goodnightmoon": "ISBN:0694003611",
+  // LGBTQ+ Books
+  "lawnboy": "ISBN:1616208252",
+  "allboys": "ISBN:0374312729",
+  "wallflower": "ISBN:1439122431",
+  "thisbookisgay": "ISBN:1728254612",
+  "flamer": "ISBN:1250803942",
+  "dyinggirl": "ISBN:161312306X"
 };
 
 let currentViewer = null;
@@ -188,6 +195,12 @@ function setupBookHovers() {
       else if (alt.includes("Giving Tree")) bookId = 'givingtree';
       else if (alt.includes("Charlotte")) bookId = 'charlottesweb';
       else if (alt.includes("Goodnight Moon")) bookId = 'goodnightmoon';
+      else if (alt.includes("Lawn Boy")) bookId = 'lawnboy';
+      else if (alt.includes("All Boys")) bookId = 'allboys';
+      else if (alt.includes("Wallflower")) bookId = 'wallflower';
+      else if (alt.includes("This Book Is Gay")) bookId = 'thisbookisgay';
+      else if (alt.includes("Flamer")) bookId = 'flamer';
+      else if (alt.includes("Dying Girl")) bookId = 'dyinggirl';
     }
     
     if (bookId && BOOK_CONFIG[bookId]) {
