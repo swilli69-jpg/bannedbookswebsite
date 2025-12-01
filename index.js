@@ -87,7 +87,14 @@ const BOOK_CONFIG = {
   "wallflower": "ISBN:1439122431",
   "thisbookisgay": "ISBN:1728254612",
   "flamer": "ISBN:1250803942",
-  "dyinggirl": "ISBN:161312306X"
+  "dyinggirl": "ISBN:161312306X",
+  // Race & Identity Books
+  "hateugive": "ISBN:006249855X",
+  "colorpurple": "ISBN:0156028352",
+  "songsolomon": "ISBN:1400033425",
+  "hoodfeminism": "ISBN:0525560548",
+  "project1619": "ISBN:0593230574",
+  "nativeson": "ISBN:0061148504"
 };
 
 let currentViewer = null;
