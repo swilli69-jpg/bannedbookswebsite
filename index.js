@@ -84,14 +84,14 @@ const BOOK_CONFIG = {
   // LGBTQ+ Books
   "lawnboy": "ISBN:1616208252",
   "allboys": "ISBN:0374312729",
-  "priceofsalt": "ISBN:1936456176",
+  "wallflower": "ISBN:1936456176",
   "thisbookisgay": "ISBN:1728254612",
   "flamer": "ISBN:1250803942",
   "dyinggirl": "ISBN:161312306X",
   // Race & Identity Books
   "hateugive": "ISBN:006249855X",
   "colorpurple": "ISBN:0156028352",
-  "songsolomon": "ISBN:0307388123",
+  "songsolomon": "ISBN:1400033425",
   "hoodfeminism": "ISBN:0525560548",
   "project1619": "ISBN:0593230574",
   "nativeson": "ISBN:0061148504"
@@ -204,7 +204,7 @@ function setupBookHovers() {
       else if (alt.includes("Goodnight Moon")) bookId = 'goodnightmoon';
       else if (alt.includes("Lawn Boy")) bookId = 'lawnboy';
       else if (alt.includes("All Boys")) bookId = 'allboys';
-      else if (alt.includes("Price of Salt")) bookId = 'priceofsalt';
+      else if (alt.includes("Wallflower")) bookId = 'wallflower';
       else if (alt.includes("This Book Is Gay")) bookId = 'thisbookisgay';
       else if (alt.includes("Flamer")) bookId = 'flamer';
       else if (alt.includes("Dying Girl")) bookId = 'dyinggirl';
