@@ -471,15 +471,15 @@ hr {
     position: fixed;     
     bottom: 20px;        
     right: 20px;       
-    width: 120px;       /* container width */
+    width: 150px;    
     height: auto;        
     cursor: pointer;     
     z-index: 1000;      
 }
 
 #quizButton img {
-    width: 100%;        /* fill the container */
-    height: auto;       /* maintain aspect ratio */
+    width: 100%;       
+    height: auto;      
     border: none !important;
     box-shadow: none !important;
     display: block;
