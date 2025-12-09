@@ -112,7 +112,6 @@
       </footer>
     </div>
 	   <script>
-      function placeButtonRandomly() {
         const btn = document.getElementById("quizButton");
 
         const btnWidth = btn.offsetWidth;
@@ -124,8 +123,6 @@
         btn.style.left = x + "px";
         btn.style.top = y + "px";
       }
-
-      window.onload = placeButtonRandomly;
 
       function startQuiz() {
         let score = 0;
