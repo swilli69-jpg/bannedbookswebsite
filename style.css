@@ -467,6 +467,7 @@ hr {
   }
 }
     /* QUIZ BUTTON */
+
 #quizButton {
     position: fixed;     
     bottom: 20px;        
@@ -483,7 +484,7 @@ hr {
     border: none !important;
     box-shadow: none !important;
     display: block;
-    border-radius: 50%;
+    border-radius: 60%;
 }
 
 #quizButton:hover {
