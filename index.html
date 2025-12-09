@@ -117,7 +117,7 @@
 
     quizBtn.addEventListener("click", function() {
       let score = 0;
-      const total = 3;
+      const total = 5;
 
       const q1 = prompt(
         "Question 1: What does book banning attempt to restrict?\nA) Access to information\nB) Writing new books\nC) Selling books online"
@@ -137,7 +137,7 @@
 	  const q4 = prompt(
         "Question 4: How many books are banned each year in the US (reported by PEN America)?\nA) about 3,000 titles\nB) about 10,000 titles\nC) about 800 titles"
       );
-      if (q4 && q4.toUpperCase() === "C") score++;
+      if (q4 && q4.toUpperCase() === "B") score++;
 
 	   const q5 = prompt(
         "Question 4: Which US State has the most banned books?\nA) Texas\nB) Florida\nC) Iowa"
