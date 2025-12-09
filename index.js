@@ -146,7 +146,7 @@ function setupBookHovers() {
       else if (alt.includes("Goodnight Moon")) bookId = 'goodnightmoon';
       else if (alt.includes("Lawn Boy")) bookId = 'lawnboy';
       else if (alt.includes("All Boys")) bookId = 'allboys';
-      else if (alt.includes("Wallflower")) bookId = 'wallflower';
+      else if (alt.includes("Price of Salt")) bookId = 'priceofsalt';
       else if (alt.includes("This Book Is Gay")) bookId = 'thisbookisgay';
       else if (alt.includes("Flamer")) bookId = 'flamer';
       else if (alt.includes("Dying Girl")) bookId = 'dyinggirl';
