@@ -497,7 +497,7 @@ hr {
    #quizButton {
     position: absolute;
     z-index: 9999;
-    width: 35px;  
+    width: 1px;  
     height: auto;
     cursor: pointer;
     transition: transform 0.2s ease;
