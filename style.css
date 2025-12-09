@@ -472,7 +472,7 @@ hr {
     position: fixed;     /* stays in place even when scrolling */
     bottom: 20px;        /* 20px from bottom */
     right: 20px;         /* 20px from right */
-    width: 30px;         /* set desired width */
+    width: 50px;         /* set desired width */
     height: auto;        /* maintain aspect ratio */
     cursor: pointer;     /* clickable pointer */
     z-index: 1000;       /* above other content */
@@ -481,14 +481,14 @@ hr {
 #quizButton img {
   width: 60px !important;
   height: 60px !important;
-  border: none !important; /* remove figure border */
+  border: none !important;
   box-shadow: none !important;
   display: block;
   border-radius: 50%;
 }
 
 #quizButton:hover {
-    transform: scale(1.2);
+    transform: scale(1.15);
     transition: transform 0.2s ease;
 }
 
