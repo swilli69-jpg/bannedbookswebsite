@@ -87,5 +87,30 @@
         </p>
       </footer>
     </div>
+  <script>
+    const quizBtn = document.getElementById("quizButton");
+
+    quizBtn.addEventListener("click", function() {
+      let score = 0;
+      const total = 3;
+
+      const q1 = prompt(
+        "Question 1: Which subtle factor often contributes to LGBTQ-themed books being challenged, beyond explicit sexual content?\nA)Inclusion of nontraditional family structures\nB) Use of complex vocabulary\nC) Length of the book\nD) The presence of fictional characters"
+      );
+      if (q1 && q1.toUpperCase() === "A") score++;
+
+      const q2 = prompt(
+        "Question 2: Which demographic is most directly affected by the banning of LGBTQ books in schools?\nA) Students in literature clubs\nB) LGBTQ youth and students seeking representation\nC) Teachers seeking lesson plans\nD) Authors"
+      );
+      if (q2 && q2.toUpperCase() === "B") score++;
+
+      const q3 = prompt(
+        "Question 3: Which of the following is often cited by supporters of Drag Queen Story Hour as a reason why such events should not be banned?\nA) Because children are involuntarily exposed to explicit sexual content.\nB) Because the events promote diversity, inclusion, and give queer youth visible role‑models.\nC) Because drag performances are a form of adult entertainment and should always be restricted from children.\nD) Because drag‑queen readings have been proven to damage children’s mental health."
+      );
+      if (q3 && q3.toUpperCase() === "B") score++;
+
+      alert("You scored " + score + " out of " + total + "!");
+    });
+  </script>
   </body>
 </html>
