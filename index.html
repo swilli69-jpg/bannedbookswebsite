@@ -108,5 +108,34 @@
 	<p>We collaborated weekly to revise content, refine navigation, and ensure the site met the project’s rubric and ethical standards. All media included is original or openly licensed, following copyright and fair-use guidelines. Our shared goal was to create a trusted, student-friendly resource that supports informed conversations about banned books across classrooms and communities.</p>
       </footer>
     </div>
+	  <div id="quizButton">
+    <img src="quiz-bottle.png" alt="Quiz Button">
+  </div>
+
+  <script>
+    const quizBtn = document.getElementById("quizButton");
+
+    quizBtn.addEventListener("click", function() {
+      let score = 0;
+      const total = 3;
+
+      const q1 = prompt(
+        "Question 1: What does book banning attempt to restrict?\nA) Access to information\nB) Writing new books\nC) Selling books online"
+      );
+      if (q1 && q1.toUpperCase() === "A") score++;
+
+      const q2 = prompt(
+        "Question 2: Which organization tracks banned books?\nA) ALA\nB) NASA\nC) NBA"
+      );
+      if (q2 && q2.toUpperCase() === "A") score++;
+
+      const q3 = prompt(
+        "Question 3: Why are LGBTQ+ books often banned?\nA) Representation concerns\nB) Too many pictures\nC) They are outdated"
+      );
+      if (q3 && q3.toUpperCase() === "A") score++;
+
+      alert("You scored " + score + " out of " + total + "!");
+    });
+  </script>
   </body>
 </html>
