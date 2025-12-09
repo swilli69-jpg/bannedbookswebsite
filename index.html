@@ -88,9 +88,6 @@
           <blockquote>
             <p>"There is more than one way to burn a book. And the world is full of people running about with lit matches." — Ray Bradbury</p>
           </blockquote>
-			
-			<img id="quizButton" src="quiz-bottle.png" alt="Quiz Button">
-	
         </div>
       </main>
       <footer>
@@ -111,36 +108,5 @@
 	<p>We collaborated weekly to revise content, refine navigation, and ensure the site met the project’s rubric and ethical standards. All media included is original or openly licensed, following copyright and fair-use guidelines. Our shared goal was to create a trusted, student-friendly resource that supports informed conversations about banned books across classrooms and communities.</p>
       </footer>
     </div>
-<script>
-window.onload = function() {
-    const btn = document.getElementById("quizButton");
-    
-    btn.style.display = "block";
-
-    btn.addEventListener("click", startQuiz);
-};
-
-function startQuiz() {
-    let score = 0;
-    let total = 3;
-
-    let q1 = prompt(
-      "Question 1: What does book banning attempt to restrict? \nA) Access to information \nB) Writing new books \nC) Selling books online"
-    );
-    if (q1 && q1.toUpperCase() === "A") score++;
-
-    let q2 = prompt(
-      "Question 2: Which organization tracks banned books? \nA) ALA \nB) NASA \nC) NBA"
-    );
-    if (q2 && q2.toUpperCase() === "A") score++;
-
-    let q3 = prompt(
-      "Question 3: Why are LGBTQ+ books often banned? \nA) Representation concerns \nB) Too many pictures \nC) They are outdated"
-    );
-    if (q3 && q3.toUpperCase() === "A") score++;
-
-    alert("You scored " + score + " out of " + total + "!");
-}
-</script>
   </body>
 </html>
