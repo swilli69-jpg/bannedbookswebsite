@@ -90,6 +90,34 @@
 	6. File:goodnight moon.JPG - Wikimedia Commons. (n.d.). https://commons.wikimedia.org/wiki/File:Goodnight_moon.JPG 
         </p>
       </footer>
-    </div>
+   </div>
+	  <div id="quizButton">
+    <img src="quiz-bottle.png" alt="Quiz Button">
+  </div>
+  <script>
+    const quizBtn = document.getElementById("quizButton");
+
+    quizBtn.addEventListener("click", function() {
+      let score = 0;
+      const total = 3;
+
+      const q1 = prompt(
+        "Question 1: A library receives a complaint that a children’s book depicts a nontraditional family structure. Which of the following is the most likely reason this book could be challenged?\nA) The story uses complex vocabulary inappropriate for the age group\nB) The depiction of family diversity is perceived as conflicting with certain cultural or religious beliefs\nC) The book has too many pages for a child to finish"
+      );
+      if (q1 && q1.toUpperCase() === "B") score++;
+
+      const q2 = prompt(
+        "Question 2: Which of the following types of content tends to provoke the most challenges in children’s literature, according to patterns documented by the ALA?\nA) Illustrations of animals\nB) Stories set in historical contexts\nC) Books with rhyming text\nD) Themes of death, divorce, or blended families"
+      );
+      if (q2 && q2.toUpperCase() === "D") score++;
+
+      const q3 = prompt(
+        "Question 3: A parent challenges a picture book because it introduces a character from a different culture. What is a nuanced reason why educators might still include this book in the curriculum?\nA) To expose students to cultural diversity and foster acceptance and understanding\nB) To make the library appear modern\nC) To satisfy testing requirements"
+      );
+      if (q3 && q3.toUpperCase() === "A") score++;
+
+      alert("You scored " + score + " out of " + total + "!");
+    });
+  </script>
   </body>
 </html>
