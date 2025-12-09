@@ -498,15 +498,15 @@ hr {
     position: fixed;     /* stays in place even when scrolling */
     bottom: 20px;        /* 20px from bottom */
     right: 20px;         /* 20px from right */
-    width: 60px;         /* ~quarter-size, adjust as needed */
+    width: 30px;         /* ~quarter-size, adjust as needed */
     height: auto;        /* keep aspect ratio */
     cursor: pointer;     /* indicate clickable */
     z-index: 1000;       /* above other content */
 }
 
     #quizButton img {
-      width: 100%;
-      height: 100%;
+      width: 50%;
+      height: 50%;
       object-fit: contain;
       border-radius: 50%;
     }
