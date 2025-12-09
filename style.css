@@ -493,4 +493,18 @@ hr {
   blockquote {
     page-break-inside: avoid;
   }
+
+    }
+  #quizButton {
+    position: absolute;
+    z-index: 9999;
+    width: 120px;   /* <-- MAKE IT SMALLER HERE */
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+#quizButton:hover {
+    transform: scale(1.08);
+  }
 }
