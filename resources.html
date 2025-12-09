@@ -38,6 +38,27 @@
         <p>To strengthen your advocacy, consider exploring several established organizations and guidelines. The American Library Association's <i>Library Bill of Rights</i> provides a foundational framework for intellectual freedom in schools and libraries. The National Coalition Against Censorship offers toolkits, case studies, and up-to-date information on censorship issues nationwide. PEN America's <i>Index of School Book Bans</i> tracks restrictions occurring across the country and can help you understand broader trends. You can also review your state's education standards, which often include language supporting the inclusion of diverse materials and perspectives in the classroom.</p>
 
 
-      </main>
+          </main>
+		 </footer>
+		 </footer>
+     </div>
+	  <div id="quizButton">
+    <img src="quiz-bottle.png" alt="Quiz Button">
+  </div>
+  <script>
+    const quizBtn = document.getElementById("quizButton");
+
+    quizBtn.addEventListener("click", function() {
+      let score = 0;
+      const total = 1;
+
+      const q1 = prompt(
+        "Question 1: Will you unite against banned books?\nA) Yes!!!\nB) No"
+      );
+      if (q1 && q1.toUpperCase() === "A") score++;
+
+      alert("You scored " + score + " out of " + total + "!");
+    });
+  </script>
   </body>
 </html>
