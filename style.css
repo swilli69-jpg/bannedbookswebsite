@@ -471,19 +471,19 @@ hr {
     position: fixed;     
     bottom: 20px;        
     right: 20px;       
-    width: 150px;         /* set desired width */
+    width: 120px;       /* container width */
     height: auto;        
     cursor: pointer;     
     z-index: 1000;      
 }
 
 #quizButton img {
-  width: 80px !important;
-  height: 60px !important;
-  border: none !important;
-  box-shadow: none !important;
-  display: block;
-  border-radius: 50%;
+    width: 100%;        /* fill the container */
+    height: auto;       /* maintain aspect ratio */
+    border: none !important;
+    box-shadow: none !important;
+    display: block;
+    border-radius: 50%;
 }
 
 #quizButton:hover {
