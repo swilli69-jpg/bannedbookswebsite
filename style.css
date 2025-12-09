@@ -484,7 +484,7 @@ hr {
     border: none !important;
     box-shadow: none !important;
     display: block;
-    border-radius: 60%;
+    border-radius: 0%;
 }
 
 #quizButton:hover {
