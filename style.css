@@ -499,7 +499,7 @@ hr {
     position: fixed;     /* stays in place even when scrolling */
     bottom: 20px;        /* 20px from bottom */
     right: 20px;         /* 20px from right */
-    width: 60px;         /* set desired width */
+    width: 30px;         /* set desired width */
     height: auto;        /* maintain aspect ratio */
     cursor: pointer;     /* clickable pointer */
     z-index: 1000;       /* above other content */
