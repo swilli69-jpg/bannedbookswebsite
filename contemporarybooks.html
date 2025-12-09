@@ -84,7 +84,35 @@
 	<p>
 	6. File:Lolita 1955.JPG. (2025, January 9). Wikimedia Commons. Retrieved December 6, 2025, from https://commons.wikimedia.org/w/index.php?title=File:Lolita_1955.JPG&oldid=981393133.
         </p>
-      </footer>
-    </div>
+     </footer>
+   </div>
+	  <div id="quizButton">
+    <img src="quiz-bottle.png" alt="Quiz Button">
+  </div>
+  <script>
+    const quizBtn = document.getElementById("quizButton");
+
+    quizBtn.addEventListener("click", function() {
+      let score = 0;
+      const total = 3;
+
+      const q1 = prompt(
+        "Question 1: Which novel among the following has historically been both widely taught and yet frequently censored, often because of its portrayal of adolescent disillusionment, profanity, and sexual references?\nA) 1984 by George Orwell\nB) The Catcher in the Rye by J.D. Salinger\nC) Animal Farm by George Orwell\nD) Brave New World by Aldous Huxley"
+      );
+      if (q1 && q1.toUpperCase() === "B") score++;
+
+      const q2 = prompt(
+        "Question 2: What is a common reason that certain classic novels — such as Of Mice and Men — have been banned or challenged in schools and libraries?\nA) They contain profanity, racial slurs, or depict racist stereotypes\nB) Their authors were not born in the United States\nC) They are impractical for school curriculums"
+      );
+      if (q2 && q2.toUpperCase() === "A") score++;
+
+      const q3 = prompt(
+        "Question 3: Which of the following contemporary titles has repeatedly appeared on “most challenged” lists, according to 2020–2024 data?\nA) 1984 by George Orwell\nB) Pride and Prejudice by Jane Austen\nC) The Bluest Eye by Toni Morrison\nD) The Handmaid's Tale by Margaret Atwood"
+       );
+	   if (q3 && q3.toUpperCase() === "C") score++;
+
+      alert("You scored " + score + " out of " + total + "!");
+    });
+  </script>
   </body>
 </html>
