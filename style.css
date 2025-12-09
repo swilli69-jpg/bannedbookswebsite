@@ -494,19 +494,15 @@ hr {
     page-break-inside: avoid;
   }
 
-      #quizButton {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      width: 50px; /* roughly the size of a quarter */
-      height: 50px;
-      cursor: pointer;
-      z-index: 9999;
-      border: 2px solid var(--primary);
-      border-radius: 50%;
-      transition: transform 0.2s ease;
-      background-color: var(--accent);
-    }
+     #quizButton {
+    position: fixed;     /* stays in place even when scrolling */
+    bottom: 20px;        /* 20px from bottom */
+    right: 20px;         /* 20px from right */
+    width: 60px;         /* ~quarter-size, adjust as needed */
+    height: auto;        /* keep aspect ratio */
+    cursor: pointer;     /* indicate clickable */
+    z-index: 1000;       /* above other content */
+}
 
     #quizButton img {
       width: 100%;
