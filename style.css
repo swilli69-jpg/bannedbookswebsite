@@ -494,26 +494,28 @@ hr {
     page-break-inside: avoid;
   }
 
-     #quizButton {
+    /* QUIZ BUTTON */
+#quizButton {
     position: fixed;     /* stays in place even when scrolling */
     bottom: 20px;        /* 20px from bottom */
     right: 20px;         /* 20px from right */
-    width: 30px;         /* ~quarter-size, adjust as needed */
-    height: auto;        /* keep aspect ratio */
-    cursor: pointer;     /* indicate clickable */
+    width: 60px;         /* set desired width */
+    height: auto;        /* maintain aspect ratio */
+    cursor: pointer;     /* clickable pointer */
     z-index: 1000;       /* above other content */
 }
 
-    #quizButton img {
-      width: 50%;
-      height: 50%;
-      object-fit: contain;
-      border-radius: 50%;
-    }
+#quizButton img {
+    width: 100%;         /* fills the container */
+    height: auto;        /* maintain aspect ratio */
+    display: block;
+    border-radius: 50%;  /* optional round style */
+}
 
-    #quizButton:hover {
-      transform: scale(1.2);
-    }
+#quizButton:hover {
+    transform: scale(1.2);
+    transition: transform 0.2s ease;
+}
 
 }
 
