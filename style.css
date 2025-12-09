@@ -509,4 +509,10 @@ hr {
 #quizButton:hover {
     transform: translateX(-50%) scale(1.2); 
 }
+  
+@media (max-width: 600px) {
+  #quizButton {
+    width: 100px;
+  }
+}
 
