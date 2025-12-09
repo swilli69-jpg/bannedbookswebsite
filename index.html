@@ -111,41 +111,36 @@
 	<p>We collaborated weekly to revise content, refine navigation, and ensure the site met the project’s rubric and ethical standards. All media included is original or openly licensed, following copyright and fair-use guidelines. Our shared goal was to create a trusted, student-friendly resource that supports informed conversations about banned books across classrooms and communities.</p>
       </footer>
     </div>
-	   <script>
-        const btn = document.getElementById("quizButton");
+<script>
+window.onload = function() {
+    const btn = document.getElementById("quizButton");
+    
+    btn.style.display = "block";
 
-        const btnWidth = btn.offsetWidth;
-        const btnHeight = btn.offsetHeight;
+    btn.addEventListener("click", startQuiz);
+};
 
-        const x = Math.random() * (window.innerWidth - btnWidth);
-        const y = Math.random() * (window.innerHeight - btnHeight);
+function startQuiz() {
+    let score = 0;
+    let total = 3;
 
-        btn.style.left = x + "px";
-        btn.style.top = y + "px";
-      }
+    let q1 = prompt(
+      "Question 1: What does book banning attempt to restrict? \nA) Access to information \nB) Writing new books \nC) Selling books online"
+    );
+    if (q1 && q1.toUpperCase() === "A") score++;
 
-      function startQuiz() {
-        let score = 0;
-        let total = 3;
+    let q2 = prompt(
+      "Question 2: Which organization tracks banned books? \nA) ALA \nB) NASA \nC) NBA"
+    );
+    if (q2 && q2.toUpperCase() === "A") score++;
 
-        let q1 = prompt(
-          "Question 1: What does book banning attempt to restrict? \nA) Access to information \nB) Writing new books \nC) Selling books online"
-        );
-        if (q1 && q1.toUpperCase() === "A") score++;
+    let q3 = prompt(
+      "Question 3: Why are LGBTQ+ books often banned? \nA) Representation concerns \nB) Too many pictures \nC) They are outdated"
+    );
+    if (q3 && q3.toUpperCase() === "A") score++;
 
-        let q2 = prompt(
-          "Question 2: Which organization tracks banned books? \nA) ALA \nB) NASA \nC) NBA"
-        );
-        if (q2 && q2.toUpperCase() === "A") score++;
-
-        let q3 = prompt(
-          "Question 3: Why are LGBTQ+ books often banned? \nA) Representation concerns \nB) Too many pictures \nC) They are outdated"
-        );
-        if (q3 && q3.toUpperCase() === "A") score++;
-
-        alert("You scored " + score + " out of " + total + "!");
-      }
-    </script>
-	  
+    alert("You scored " + score + " out of " + total + "!");
+}
+</script>
   </body>
 </html>
