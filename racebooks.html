@@ -87,6 +87,34 @@
 	6. File:Native Son (1940) front cover, first edition.jpg. (2025, August 18). Wikimedia Commons. Retrieved December 6, 2025, from https://commons.wikimedia.org/w/index.php?title=File:Native_Son_(1940)_front_cover,_first_edition.jpg&oldid=1074497183.
         </p>
       </footer>
-    </div>
+   </div>
+	  <div id="quizButton">
+    <img src="quiz-bottle.png" alt="Quiz Button">
+  </div>
+  <script>
+    const quizBtn = document.getElementById("quizButton");
+
+    quizBtn.addEventListener("click", function() {
+      let score = 0;
+      const total = 3;
+
+      const q1 = prompt(
+        "Question 1: True or False: Books that address race and identity are sometimes banned or challenged in schools even if they only feature characters of color without explicitly discussing race.\nA)True\nB) False"
+      );
+      if (q1 && q1.toUpperCase() === "A") score++;
+
+      const q2 = prompt(
+        "Question 2: Which of the following books is mentioned as a frequently challenged title about race and identity?\nA) To Kill a Mockingbird\nB) The Hate U Give\nC) The Color Purple"
+      );
+      if (q2 && q2.toUpperCase() === "B") score++;
+
+      const q3 = prompt(
+        "Question 3: Which of the following is NOT listed on the page as a consequence of banning books about race and identity?\nA) Students miss out on learning empathy and understanding different perspectives\nB) Communities lose access to diverse stories and histories\nC) Schools save money on textbooks\nD) Readers face censorship of important cultural narratives"
+      );
+      if (q3 && q3.toUpperCase() === "C") score++;
+
+      alert("You scored " + score + " out of " + total + "!");
+    });
+  </script>
   </body>
 </html>
