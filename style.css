@@ -471,7 +471,7 @@ hr {
     position: fixed;     
     bottom: 20px;        
     right: 20px;       
-    width: 100px;         /* set desired width */
+    width: 150px;         /* set desired width */
     height: auto;        
     cursor: pointer;     
     z-index: 1000;      
