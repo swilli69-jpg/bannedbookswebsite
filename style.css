@@ -494,15 +494,19 @@ hr {
     page-break-inside: avoid;
   }
 
-  #quizButton {
-  position: absolute;
-  z-index: 9999;
-  width: 35px;   /* Fingernail-sized width */
-  height: auto;
-  cursor: pointer;
-  transition: transform 0.2s ease;
+#quizButton {
+    position: fixed;     
+    bottom: 20px;         
+    left: 50%;           
+    transform: translateX(-50%); 
+    width: 35px;        
+    height: auto;
+    cursor: pointer;
+    z-index: 9999;
+    transition: transform 0.2s ease;
 }
 
 #quizButton:hover {
-  transform: scale(1.2);
+    transform: translateX(-50%) scale(1.2); 
 }
+
