@@ -125,14 +125,24 @@
       if (q1 && q1.toUpperCase() === "A") score++;
 
       const q2 = prompt(
-        "Question 2: Which organization tracks banned books?\nA) ALA\nB) NASA\nC) NBA"
+        "Question 2: Which organization tracks banned books?\nA) Department of Education\nB) School Boards\nC) ALA"
       );
-      if (q2 && q2.toUpperCase() === "A") score++;
+      if (q2 && q2.toUpperCase() === "C") score++;
 
       const q3 = prompt(
-        "Question 3: Why are LGBTQ+ books often banned?\nA) Representation concerns\nB) Too many pictures\nC) They are outdated"
+        "Question 3: Why are LGBTQ+ books often banned?\nA) Homophobia\nB) Community control/censorship\nC) Political/religious agenda\nD) All the above"
       );
-      if (q3 && q3.toUpperCase() === "A") score++;
+      if (q3 && q3.toUpperCase() === "D") score++;
+
+	  const q4 = prompt(
+        "Question 4: How many books are banned each year in the US (reported by PEN America)?\nA) about 3,000 titles\nB) about 10,000 titles\nC) about 800 titles"
+      );
+      if (q2 && q2.toUpperCase() === "C") score++;
+
+	   const q5 = prompt(
+        "Question 4: Which US State has the most banned books?\nA) Texas\nB) Florida\nC) Iowa"
+      );
+      if (q2 && q2.toUpperCase() === "C") score++;
 
       alert("You scored " + score + " out of " + total + "!");
     });
