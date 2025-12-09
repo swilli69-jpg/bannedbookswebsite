@@ -479,10 +479,12 @@ hr {
 }
 
 #quizButton img {
-    width: 30px !important;
-    height: 30px !important;
-    display: block;
-    border-radius: 50%;
+  width: 30px !important;
+  height: 30px !important;
+  border: none !important; /* remove figure border */
+  box-shadow: none !important;
+  display: block;
+  border-radius: 50%;
 }
 
 #quizButton:hover {
