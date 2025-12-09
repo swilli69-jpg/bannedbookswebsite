@@ -479,8 +479,8 @@ hr {
 }
 
 #quizButton img {
-  width: 30px !important;
-  height: 30px !important;
+  width: 60px !important;
+  height: 60px !important;
   border: none !important; /* remove figure border */
   box-shadow: none !important;
   display: block;
