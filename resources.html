@@ -40,5 +40,20 @@
 
       </main>
     </div>
+  <script>
+    const quizBtn = document.getElementById("quizButton");
+
+    quizBtn.addEventListener("click", function() {
+      let score = 0;
+      const total = 1;
+
+      const q1 = prompt(
+        "Question 1: Will you unite against banned books?\nA) Yes!!!\nB) No"
+      );
+      if (q1 && q1.toUpperCase() === "A") score++;
+
+      alert("You scored " + score + " out of " + total + "!");
+    });
+  </script>
   </body>
 </html>
